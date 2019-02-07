@@ -10,7 +10,14 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var leaderboard = require('./routes/leaderboard');
+var about = require('./routes/about');
+var discussion = require('./routes/discussion');
+var help = require('./routes/help');
 var home = require('./routes/home');
+var landing = require('./routes/landing');
+var login = require('./routes/login');
+var profile = require('./routes/profile');
+var gallery = require('./routes/gallery');
 // Example route
 // var user = require('./routes/user');
 
@@ -38,7 +45,14 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/leaderboard', leaderboard.addTemplate);
+app.get('/about', about.view);
+app.get('/discussion', discussion.view);
+app.get('/help', help.view);
 app.get('/home', home.view);
+app.get('/landing', landing.view);
+app.get('/login', login.view);
+app.get('/profile', profile.view);
+app.get('/gallery', gallery.view);
 // Example route
 // app.get('/users', user.list);
 
