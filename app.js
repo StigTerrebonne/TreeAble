@@ -47,7 +47,8 @@ app.get('/leaderboard', leaderboard.addTemplate);
 app.get('/about', about.view);
 app.get('/discussion', discussion.view);
 app.get('/help', help.view);
-app.get('/', home.view); //Change!!
+app.get('/home', home.view); //Change!!
+app.get('/', home.view);
 app.get('/login', login.view);
 app.get('/profile', profile.view);
 app.get('/gallery', gallery.view);
