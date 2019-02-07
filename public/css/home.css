@@ -1,0 +1,15 @@
+.btn.btn-square {
+    border-radius: 0;
+    height: 7rem;
+    width: 7rem;
+}
+
+.btn.btn-clear {
+    background-color: transparent;
+}
+
+.custom-camera {
+    font-size: 200px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
