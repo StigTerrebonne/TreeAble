@@ -1,7 +1,8 @@
-/*
- * GET home page.
- */
+var data = require('../leaderboardData.json'); //grab data for leaderboard
 
-exports.view = function(req, res){
-    res.render('leaderboard');
+exports.addTemplate = function(req, res){
+	console.log(data);
+	res.render('leaderboard', {
+		'data': data
+	});
 };
