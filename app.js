@@ -42,13 +42,13 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/index', index.view); //Change!!
+app.get('/', index.view);
+app.get('/index', index.view);
 app.get('/leaderboard', leaderboard.addTemplate);
 app.get('/about', about.view);
 app.get('/discussion', discussion.view);
 app.get('/help', help.view);
-app.get('/home', home.view); //Change!!
-app.get('/', home.view);
+app.get('/home', home.view); 
 app.get('/login', login.view);
 app.get('/profile', profile.view);
 app.get('/gallery', gallery.view);
