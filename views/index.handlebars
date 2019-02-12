@@ -8,49 +8,97 @@
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/index.css" rel="stylesheet">
 </head>
-<!-- Nav Bar!! -->
-<nav class="navbar navbar-default">
-  	<div class="container-fluid">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="home">Treeable</a>
-    	</div>
-	</div>
-
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!-- text on left -->
-      <ul class="nav navbar-nav">
-      	<li><a href="home">Home</a></li>
-      	<li><a href="profile">Profile</a></li>
-      	<li><a href="leaderboard">Leaderboard</a></li>
-      	<li><a href="discussion">Discussion</a></li>
-      	<li><a href="gallery">Gallery</a></li>	
-      </ul> 	
-		<!-- text on Right -->
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="about">About</a></li>
-        <li><a href="help">Help</a></li>
-      	<li><a href="home">Log Out</a></li>
-      </ul>
-</nav>
 
 <body>
 	<div class="container">
-
+		<h1 class="centerTitle">Treeable</h1>
+		<button class="signupButton" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+		<p class="paragraph">Already a Member? <a data-toggle="modal" data-target="#loginModal">Log In</a></p>
+		<p class="aboutUs"><a href="about">Learn more about us!</a></p>
 	</div>
+
+	<!-- Login Modal -->
+		<div id="loginModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+				    <!-- Modal content-->
+				    <div class="modal-content">
+				      	<div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4>Login</h4>
+				      	</div>
+				      	<div class="modal-body">
+				      		<form role="form">
+					            <div class="form-group">
+					              <label for="usrname">Username</label>
+					              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+					            </div>
+					            <div class="form-group">
+					              <label for="psw">Password</label>
+					              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+					            </div>
+					            <div class="checkbox">
+					              <label><input type="checkbox" value="" checked>Remember me</label>
+					            </div>
+					            	<a href="home" class="btn btn-success btn-block">Login</a>
+					         </form>
+			          		
+				     	</div>
+				      	<div class="modal-footer">
+				          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">Cancel</button>
+				          <p>Forgot <a href="index">Password?</a></p>
+				        </div>
+				    </div>
+
+			  </div>
+		</div>
+
+		<!-- SignUp Modal -->
+		<div id="signupModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+
+				    <!-- Modal content-->
+				    <div class="modal-content">
+				      	<div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4>Do your thing</h4>
+				      	</div>
+				      	<div class="modal-body">
+				      		<form role="form">
+				      			<div class="form-group">
+					              <label for="usrname">Choose your Username</label>
+					              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+					            </div>
+					            <div class="form-group">
+					              <label for="email">Email!</label>
+					              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+					            </div>
+					            <div class="form-group">
+					              <label for="psw">Choose your Password</label>
+					              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+					            </div>
+					            <div class="form-group">
+					              <label for="psw">Certify that Password</label>
+					              <input type="text" class="form-control" id="psw" placeholder="Enter password (again)">
+					            </div>
+					            <div class="checkbox">
+					              <label><input type="checkbox" value="">Agree to the Terms & Services</label>
+					            </div>
+					            	<a href="home" class="btn btn-success btn-block">Sign Up</a>
+					         </form>
+			          		
+				     	</div>
+				      	<div class="modal-footer">
+				          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">Cancel</button>
+				        </div>
+				    </div>
+
+			  </div>
+		</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/leaderboardQuery.js"></script>
 </body>
-<body>
-<!--Begin here (or replace this with any static code already written). -->
-</body>
-<font size="69">Index Page Place Holder!</font>
 </html>
