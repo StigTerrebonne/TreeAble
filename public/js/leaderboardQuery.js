@@ -2,12 +2,8 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializePage();
+    $('#leaderboard').DataTable();
 })
-
-function initializePage() {
-	console.log("Javascript connected!");
-}
 
 $('.count').each(function () {
     $(this).prop('Counter',0).animate({

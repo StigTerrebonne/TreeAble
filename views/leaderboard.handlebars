@@ -11,7 +11,7 @@
 </head>
 <!-- Nav Bar!! -->
 <nav class="navbar navbar-default navbar-fixed-top">
-  	<div class="container-fluid">
+		<div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" >
 	        <span class="sr-only">Toggle navigation</span>
@@ -46,8 +46,8 @@
 		
 
 		<!-- Table for Leaderboard-->  
-		<div class="fixed_header" style="height: 250px; margin-bottom: 10px; overflow-y: auto;"><!-- Y Scroll-->
-			<table class="table table-condensed table table-hover">
+		<div class="table-responsive text-center"><!-- Y Scroll-->
+			<table id="leaderboard" class="table table-hover">
 			    <thead>
 			      	<tr>
 			        	<th>Rank</th>
@@ -60,19 +60,24 @@
 			    	{{#each data.leaderboard}}
 			    	<tr>
 			    		<td>{{rank}}</td>
-				        <td>{{name}}</td>
-				        <td>{{score}}</td>
+				      <td>{{name}}</td>
+				      <td>{{score}}</td>
 				    </tr>
-					{{/each}} 
+						{{/each}} 
 			    </tbody>
 			</table>
 		</div>
-		<div class="text-center">
-			<!-- Create Button For PopUp--> 
-			<button class="rankingButton" data-toggle="modal" data-target="#uploadModal">Improve Your Ranking <span class="glyphicon glyphicon-camera" aria-hidden="true"></span></button>
+		
+		<div class="row">
+			<div class="container col-sm-12 text-center">
+				<!-- Create Button For PopUp--> 
+				<button class="rankingButton" data-toggle="modal" data-target="#uploadModal">Improve Your Ranking <span class="glyphicon glyphicon-camera" aria-hidden="true"></span></button>
+			</div>
+		</div>
+		<div class="container">
+			<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 		</div>
 
-		<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 
 		<!-- Modal -->
 		<div id="uploadModal" class="modal fade" role="dialog">
@@ -100,17 +105,17 @@
 		<div id="doneModal" class="modal fade" role="dialog">
 			  <div class="modal-dialog">
 
-				    <!-- Modal content-->
+				  	<!-- Modal content-->
 				    <div class="modal-content">
-				      	<div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal">&times;</button>
-				        	<h4 class="modal-title">Your Picture Has Been Uploaded!</h4>
+				  	    <div class="modal-header">
+					  	  	  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				      			<h4 class="modal-title">Your Picture Has Been Uploaded!</h4>
 				      	</div>
 				      	<div class="modal-body">
-				      		<p>Your rank will be updated after the picture is verified</p>
-				     	</div>
+				      			<p>Your rank will be updated after the picture is verified</p>
+				     		</div>
 				      	<div class="modal-footer">
-				      		<button type="submit" class="btn btn-success btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-arrow-right"></span></button>
+				      			<button type="submit" class="btn btn-success btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-arrow-right"></span></button>
 			        	</div>
 				    </div>
 
@@ -124,6 +129,8 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 	<script src="/js/leaderboardQuery.js"></script>
 </body>
 </html>
