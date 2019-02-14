@@ -1,0 +1,75 @@
+.backButton{
+    margin: 0;
+    position: absolute;
+    top: 92%;
+    left: 7%;
+    -ms-transform: translate(-7%, -92%);
+    transform: translate(-7%, -92%);
+}
+.backButton:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+.member_image{
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+.input_note{
+    font-size: .9rem;
+    line-height: 1.25rem;
+    color: #616061;
+}
+.clearButton {
+    border-radius: 30px; 
+    text-align: center; 
+    padding: 20px 50px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: white;
+
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 7%;
+    -ms-transform: translate(-7%, -80%);
+    transform: translate(-7%, -80%);
+  
+}
+.clearButton:hover {
+  background-color: #ffffff; 
+  color: black;
+}
+
+.deleteButton {
+    border-radius: 30px; 
+    text-align: center; 
+    padding: 20px 50px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: white;
+
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 93%;
+    -ms-transform: translate(-93%, -80%);
+    transform: translate(-93%, -80%);
+  
+}
+.deleteButton:hover {
+  background-color: #ffffff; 
+  color: black;
+}
+
+.cancelButton{
+    color: black;
+}
+.cancelButton:hover{
+    color: gray;
+    cursor: pointer;
+}

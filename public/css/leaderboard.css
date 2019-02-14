@@ -1,7 +1,57 @@
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h5 {
 	margin-bottom: 30px;
+	margin-top: 70px;
 
+}
+h4 {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.count{
+	font-size: 50px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.rankingButton {
+    border-radius: 30px; 
+    margin-top: 15px;
+    text-align: center; 
+    padding: 20px 50px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: white;
+  
+}
+.rankingButton:hover {
+  background-color: #ffffff; 
+  color: black;
+}
+
+.backButton{
+    margin: 0;
+    position: absolute;
+    top: 92%;
+    left: 7%;
+    -ms-transform: translate(-7%, -92%);
+    transform: translate(-7%, -92%);
+}
+.backButton:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+.fixed_header tbody{
+  display:block;
+  overflow:auto;
+  height:200px;
+  width:100%;
+}
+
+.fixed_header thead tr{
+  display:block;
 }
 
 

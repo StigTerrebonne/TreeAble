@@ -6,7 +6,6 @@ $(document).ready(function() {
 })
 
 function initializePage() {
-	console.log("Javascript connected!");
 }
 
 $('.count').each(function () {
