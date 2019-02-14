@@ -39,15 +39,28 @@
 
 <body>
 	<div class="container">
-
+		<h1 class="text-center">Good Work!</h1>
+		<h2 class="count text-center">7</h2> 
+		<p class="text-center">Uploads (and counting)</p> 
+		
+		</div>
+		<div class="text-center">
+			<button type="button" class="dropDown btn" data-toggle="collapse" data-target="photosDrop">Check them out <span class="glyphicon glyphicon-chevron-down"></span></button> 
+		</div>
+		
+		<div id="carousel">
+			{{#each data.photos}}
+		    <div class="slide">
+		        <img src="{{image}}"/>
+		    </div>
+		    {{/each}}
+		</div>
+		<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 	</div>
-
+	
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
+	<script src="/js/galleryQuery.js"></script>
 </body>
-<body>
-<!--Begin here (or replace this with any static code already written). -->
-</body>
-<font size="69">Gallery Page Place Holder!</font>
 </html>
