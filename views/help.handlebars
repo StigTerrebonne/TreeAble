@@ -7,6 +7,7 @@
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.css" rel="stylesheet">
 	<link href="/css/help.css" rel="stylesheet">
+	<title>Help and FAQ</title>
 </head>
 <!-- Nav Bar!! -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -37,6 +38,30 @@
       </ul>
 </nav>
 
+<!-- makes back button-->
+	<div id = "goBack"  style ="float:left">
+		<button onclick="goBack()">Go Back</button>
+
+		<script>
+		function goBack()
+		{
+  			window.history.back();
+		}
+		</script>
+	</div>
+
+	<!-- makes back forward-->
+	<div id = "goFoward" style ="float:right">
+		<button onclick="goForward()">Go Forward</button>
+
+		<script>
+		function goForward()
+		{
+  			window.history.forward();
+		}
+		</script>
+	</div>
+
 <body>
 	<div class="container">
 
@@ -46,8 +71,50 @@
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
 </body>
+
 <body>
-<!--Begin here (or replace this with any static code already written). -->
+	<div class="container">
+		
+		<div class="Help and FAQ">
+				<h1 align="left">Help and FAQ</h1>
+		</div>
+
+		<div class="Leaderboard">
+			<p id="Leaderboard">
+				<h3>Leaderboard:</h3>
+				1) How to update ranking?<br>Ans: Press the camera button and open the camera to take a picture of you recycling. Upload the photo and wait for your score to update.<br><br>
+					
+				2) How are you score?<br> Ans: You are being score by other people who are online to check if your picture is real and if they approve, your points are increase.<br><br>
+
+				3) How do I find my ranking?<br> Ans: Your ranking can be found in the Rank tab in the navigation bar. In there, you will see a "my rank" button above the leaderboard rankings which shows you your rank.
+			</p>
+		</div>
+
+		<div class="Discussion">
+			<p id="Discussion">
+				<h3>Discussion:</h3>
+				1) What do I find in "Discussion"?<br> Ans: You can find all sorts of topics on recycling. It serves to improve people's knowledge on recycling. 
+				You can also ask quesions on things you are not sure about.<br><br>
+
+				2) Do I need to login or have an account to use disccusion?<br>
+				Ans: Yes, you need an account to do most things on Treeable<br><br>
+
+				3) How do I post a topic?<br> Ans: First Write a title on what your topic is, select a category to post in, write what your question or topic of disccusion is, and post.
+			</p>
+		</div>
+
+		<div class="Profile">
+			<p id="Profile">
+				<h3>Profile:</h3>
+				1) How do I change my username?<br>
+				Ans: Go to Profile > setting > select change username.<br><br>
+
+				2) How do I link my social medias?<br>
+				Ans: You can link your social media under Profile > Setting > Social Media.
+				Now you can share your Gallery to your social media or search for friends!<br><br>
+			</p>
+		</div>
+	</div>
 </body>
-<font size="69">Help Page Place Holder!</font>
+
 </html>
