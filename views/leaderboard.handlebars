@@ -10,10 +10,10 @@
 	<link href="/css/leaderboard.css" rel="stylesheet">
 </head>
 <!-- Nav Bar!! -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   	<div class="container-fluid">
 	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" >
 	        <span class="sr-only">Toggle navigation</span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
@@ -41,9 +41,12 @@
 <body>
 	<div class="container">
 		<h1 class="text-center">Leaderboard</h1>
+		<h4 class="text-center">Your Rank:</h4>
+		<div class="count">3</div>
+		
 
 		<!-- Table for Leaderboard-->  
-		<div style="height: 250px; margin-bottom: 10px; overflow-y: auto;"><!-- Y Scroll-->
+		<div class="fixed_header" style="height: 250px; margin-bottom: 10px; overflow-y: auto;"><!-- Y Scroll-->
 			<table class="table table-condensed table table-hover">
 			    <thead>
 			      	<tr>
@@ -66,10 +69,11 @@
 		</div>
 		<div class="text-center">
 			<!-- Create Button For PopUp--> 
-			<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#uploadModal">
-	  			Improve Your Ranking <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>  
-			</button>
+			<button class="rankingButton" data-toggle="modal" data-target="#uploadModal">Improve Your Ranking <span class="glyphicon glyphicon-camera" aria-hidden="true"></span></button>
 		</div>
+
+		<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+
 		<!-- Modal -->
 		<div id="uploadModal" class="modal fade" role="dialog">
 			  <div class="modal-dialog">
