@@ -6,3 +6,15 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.back-button{
+    margin: 0;
+    border-top: 10px;
+    padding-top: 10px;
+    -ms-transform: translate(-7%, -92%);
+    transform: translate(-7%, -92%);
+}
+.back-button:hover{
+    color: gray;
+    cursor: pointer;
+}
