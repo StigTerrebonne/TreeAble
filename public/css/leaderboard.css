@@ -16,10 +16,10 @@ h4 {
 }
 
 .rankingButton {
-    border-radius: 30px; 
-    margin-top: 15px;
+    border-radius: 10px; 
+    margin-top: 1px;
     text-align: center; 
-    padding: 20px 50px;
+    padding: 10px 20px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     border: white;
@@ -32,9 +32,8 @@ h4 {
 
 .backButton{
     margin: 0;
-    position: absolute;
-    top: 92%;
-    left: 7%;
+    border-top: 10px;
+    padding-top: 10px;
     -ms-transform: translate(-7%, -92%);
     transform: translate(-7%, -92%);
 }
@@ -43,7 +42,7 @@ h4 {
     cursor: pointer;
 }
 
-.fixed_header tbody{
+/* .fixed_header tbody{
   display:block;
   overflow:auto;
   height:200px;
@@ -52,7 +51,7 @@ h4 {
 
 .fixed_header thead tr{
   display:block;
-}
+} */
 
 
 

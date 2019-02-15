@@ -1,0 +1,19 @@
+{
+    "discussion": [
+        {
+            "id": "post0",
+            "title": "How to Recycle",
+            "preview": "We'll share our tips on recycling and discuss effective strategies here"
+        },
+        {
+            "id": "post1",
+            "title": "Most common item that you recycle?",
+            "preview": "What are some things you commonly recycle based on the gallery? Share your items here!"
+        },
+        {
+            "id": "post2",
+            "title": "Off topic discussion",
+            "preview": "Have a casual conversation with someone here"
+        }
+    ]
+}

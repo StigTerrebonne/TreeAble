@@ -39,15 +39,35 @@
 
 <body>
 	<div class="container">
+		<h2>Discussion</h2>
 
+		<!-- Search bar -->
+		<input class="form-control" type="text" placeholder="Search posts" aria-label="Search">
+
+		<!-- Posts / need to add jQuery onclick -->
+		<div id="posts-container" class="container posts">
+			<div class="panel-group">
+				<!-- Add posts via json file -->
+				{{#each posts.discussion}}
+				<div id={{id}} class="panel panel-default single-post">
+					<div class="panel-heading">{{title}}</div>
+					<div class="panel-body">{{preview}}</div>
+				</div>
+				<br />
+				{{/each}}
+			</div>
+		</div>
+
+		<div id="individual-post" class="container"></div>
+
+		<div class="container">
+			<h5 class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
+	<script src="/js/discussion.js"></script>
 </body>
-<body>
-<!--Begin here (or replace this with any static code already written). -->
-</body>
-<font size="69">Discussion Page Place Holder!</font>
 </html>
