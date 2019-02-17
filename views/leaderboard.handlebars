@@ -59,7 +59,7 @@
 			    	<!--Add JSON Data to leaderboard-->
 			    	{{#each data.leaderboard}}
 			    	<tr>
-			    		<td>{{rank}}</td>
+			    	<td>{{rank}}</td>
 				      <td>{{name}}</td>
 				      <td>{{score}}</td>
 				    </tr>
@@ -68,14 +68,9 @@
 			</table>
 		</div>
 		
-		<div class="row">
-			<div class="container col-sm-12 text-center">
-				<!-- Create Button For PopUp--> 
-				<button class="rankingButton" data-toggle="modal" data-target="#uploadModal">Improve Your Ranking <span class="glyphicon glyphicon-camera" aria-hidden="true"></span></button>
-			</div>
-		</div>
+		
 		<!--Back Button location-->
-
+		<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 
 		<!-- Modal -->
 		<div id="uploadModal" class="modal fade" role="dialog">
@@ -118,7 +113,10 @@
 				    </div>
 
 			  </div>
+
 		</div>
+		<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera" data-toggle="modal" data-target="#uploadModal">
+
 
 
 
