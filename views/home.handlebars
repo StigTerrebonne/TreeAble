@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-	<title>Home</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.css" rel="stylesheet">
-	<link href="/css/home.css" rel="stylesheet">
-</head>
-<!-- Nav Bar!! -->
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" >
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="home">Treeable</a>
-    	</div>
-	</div>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-grid.css" rel="stylesheet">
+		<link href="/css/home.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="/js/home.js"></script>
+		<script src="/js/bootstrap.bundle.js"></script>
+	</head>
 
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!-- text on left -->
-      <ul class="nav navbar-nav">
-      	<li><a href="leaderboard"><span class="glyphicon glyphicon-signal"></span> Rank</a></li>
-      	<li><a href="discussion"><span class="glyphicon glyphicon-inbox"></span> Discussion</a></li>
-      	<li><a href="gallery"><span class="glyphicon glyphicon-film"></span> Gallery</a></li>	
-      </ul> 	
-		<!-- text on Right -->
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-        <li><a href="help"><span class="glyphicon glyphicon-cutlery"></span> Help</a></li>
-      	<li><a href="index"><span class="glyphicon glyphicon-eject"></span> Log Out</a></li>
-      </ul>
-</nav>
-
-<body>
-	<div class="container text-center">
-		<h2 class="text-center">Current Ranking: 3</h2>
-
-		<div id="progress-chart">
-
-		</div>
-
-		<div class="row">
-			<div class="container col-md-6">
-				<a href="leaderboard" class="btn btn-default btn-block">Leaderboard</a>
-			</div>
-			<div class="container col-md-6">
-				<a href="discussion" class="btn btn-default btn-block">Discussion</a>
+	<!-- Nav Bar!! -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="home">Treeable</a>
 			</div>
 		</div>
-	</div>
 
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/jquery-1.11.0.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-	<script src="/js/home.js"></script>
-	<script src="/js/bootstrap.js"></script>
-</body>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<!-- text on left -->
+			<ul class="nav navbar-nav">
+				<li><a href="leaderboard"><span class="glyphicon glyphicon-signal"></span> Rank</a></li>
+				<li><a href="discussion"><span class="glyphicon glyphicon-inbox"></span> Discussion</a></li>
+				<li><a href="gallery"><span class="glyphicon glyphicon-film"></span> Gallery</a></li>
+			</ul>
+			<!-- text on Right -->
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+				<li><a href="help"><span class="glyphicon glyphicon-cutlery"></span> Help</a></li>
+				<li><a href="index"><span class="glyphicon glyphicon-eject"></span> Log Out</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<body>
+		<div class="container text-center">
+			<h2 class="text-center">Current Ranking: 3</h2>
+
+			<div id="progress-chart">
+
+			</div>
+
+			<div class="row">
+				<div class="container col-md-6">
+					<a href="leaderboard"><button type="button" class="btn btn-secondary">Leaderboard</a>
+				</div>
+				<br />
+				<div class="container col-md-6">
+					<a href="discussion"><button type="button" class="btn btn-secondary">Discussion</a>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
