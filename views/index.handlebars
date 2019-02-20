@@ -11,15 +11,18 @@
 		<script src="/js/jquery-1.11.0.js"></script>
 		<script src="/js/bootstrap.bundle.js"></script>
 		<script src="/js/leaderboardQuery.js"></script>
+		{{> facebook}}
+		<script src="/js/facebook.js"></script>
 	</head>
 
-	<body>
-		<div class="container">
-			<h1 class="centerTitle">Treeable</h1>
-			<button class="signupButton" data-toggle="modal" data-target="#signupModal">Sign Up</button>
-			<p class="paragraph">Already a Member? <a data-toggle="modal" data-target="#loginModal">Log In</a></p>
-			<p class="aboutUs"><a href="about">Learn more about us!</a></p>
-		</div>
+<body>
+	<div class="container">
+		<h1 class="centerTitle">Treeable</h1>
+		<button class="signupButton" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+		<p class="paragraph">Already a Member? <a onclick="checkLoginState()">Log In</a></p>
+		<!--<a data-toggle="modal" data-target="#loginModal">-->
+		<p class="aboutUs"><a href="about">Learn more about us!</a></p>
+	</div>
 
 		<!-- Login Modal -->
 		<div id="loginModal" class="modal fade" role="dialog">
