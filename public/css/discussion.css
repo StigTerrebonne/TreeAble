@@ -8,13 +8,32 @@ body {
 }
 
 .back-button{
+    position: absolute;
     margin: 0;
     border-top: 10px;
     padding-top: 10px;
-    -ms-transform: translate(-7%, -92%);
-    transform: translate(-7%, -92%);
+    top: 93%;
+    left: 7%;
+    -ms-transform: translate(-7%, -93%);
+    transform: translate(-7%, -93%);
 }
 .back-button:hover{
     color: gray;
     cursor: pointer;
 }
+.addCamera{
+    max-width: 100%;
+    height: 75px;
+    width: 75px;
+
+    margin: 0;
+    position: fixed;
+    top: 97%;
+    left: 93%;
+    -ms-transform: translate(-93%, -97%);
+    transform: translate(-93%, -97%);
+}
+.addCamera:hover{
+    color: gray;
+    cursor: pointer;
+    }

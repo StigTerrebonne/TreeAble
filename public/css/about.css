@@ -1,3 +1,20 @@
-body {
-    padding-top: 40px;
+.backButton{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 92%;
+    left: 7%;
+    -ms-transform: translate(-7%, -92%);
+    transform: translate(-7%, -92%);
+}
+.backButton:hover{
+    color: gray;
+    cursor: pointer;
+}
+.cancelButton{
+    color: black;
+}
+.cancelButton:hover{
+    color: gray;
+    cursor: pointer;
 }
