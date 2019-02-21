@@ -1,49 +1,50 @@
 <!doctype html>
 
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap-theme.css" rel="stylesheet">
-	<link href="/css/discussion.css" rel="stylesheet">
-</head>
 
-{{> navbar}}
+	<head>
+		<title>Discussions</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-grid.css" rel="stylesheet">
+		<link href="/css/discussion.css" rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.bundle.js"></script>
+		<script src="/js/discussion.js"></script>
+	</head>
 
-<body>
-	<div class="container">
-		<h2>Discussion</h2>
+	{{> navbar}}
 
-		<!-- Search bar -->
-		<input class="form-control" type="text" placeholder="Search posts" aria-label="Search">
-
-		<!-- Posts / need to add jQuery onclick -->
-		<div id="posts-container" class="container posts">
-			<div class="panel-group">
-				<!-- Add posts via json file -->
-				{{#each posts.discussion}}
-				<div id={{id}} class="panel panel-default single-post">
-					<div class="panel-heading">{{title}}</div>
-					<div class="panel-body">{{preview}}</div>
-				</div>
-				<br />
-				{{/each}}
-			</div>
-			<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera" data-toggle="modal" data-target="#uploadModal">
-			<h5 class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
-		</div>
-
-		<div id="individual-post" class="container"></div>
-
+	<body>
 		<div class="container">
-			
-		</div>
-	</div>
+			<h2 class="text-center">Discussions</h2>
 
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/jquery-1.11.0.js"></script>
-	<script src="/js/bootstrap.js"></script>
-	<script src="/js/discussion.js"></script>
-</body>
+			<!-- Posts / need to add jQuery onclick -->
+			<div id="posts-container" class="container posts">
+				<div class="card" style="width: 18rem;">
+					{{#each posts.discussion}}
+					<div class="card-body" id={{id}}>
+						<h5 class="card-title">{{title}}</h5>
+						<h6 class="card-subtitle text-muted">Card subtitle</h6>
+						<p class="card-text">{{preview}}</p>
+						<a href="#" class="card-link">View discussion</a>
+						<br /><br />
+					</div>
+					{{/each}}
+				</div>
+				<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera"
+					data-toggle="modal" data-target="#uploadModal">
+				<h5 class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+			</div>
+
+			<div id="individual-post" class="container"></div>
+
+			<div class="container"></div>
+		</div>
+	</body>
+
 </html>

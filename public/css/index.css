@@ -1,63 +1,11 @@
-.signupButton {
-	border-radius: 30px; 
-	text-align: center; 
-	padding: 20px 50px;
-	-webkit-transition-duration: 0.4s; /* Safari */
-  	transition-duration: 0.4s;
-  	border: white;
-
-  	margin: 0;
-  	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	-ms-transform: translate(-50%, -50%);
-  	transform: translate(-50%, -50%);
-  
-}
-.signupButton:hover {
-  background-color: #ffffff; 
-  color: black;
-}
-.loginButton {
-	border-radius: 30px; 
-	text-align: center; 
-	padding: 10px 50px;
-	-webkit-transition-duration: 0.4s; /* Safari */
-  	transition-duration: 0.4s;
-  	border: white;
-
-  	margin: 0;
-  	position: absolute;
-  	left: 50%;
-  	-ms-transform: translateX(-50%);
-  	transform: translateX(-50%);
-  }
-  .loginButton:hover {
-  background-color: #ffffff; 
-  color: black;
-}
-.paragraph{
-	margin: 0;
-  	position: absolute;
-  	top: 58%;
-  	left: 50%;
-  	-ms-transform: translate(-50%, -58%);
-  	transform: translate(-50%, -58%);
-}
-.aboutUs{
-	margin: 0;
-  	position: absolute;
-  	top: 95%;
-  	left: 50%;
-  	-ms-transform: translate(-50%, -95%);
-  	transform: translate(-50%, -95%);
-}
-.centerTitle{
-	margin: 0;
-  	position: absolute;
-  	top: 25%;
-  	left: 50%;
-  	-ms-transform: translate(-50%, -25%);
-  	transform: translate(-50%, -25%);
+/* IDs */
+#app-title {
+	padding-bottom: 65px;
 }
 
+/* Classes */
+
+/* Tags */
+html, body {
+	height: 100%;
+}
