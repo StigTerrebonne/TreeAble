@@ -4,6 +4,8 @@
  */
 
 var express = require('express');
+var multer = require('multer');
+var upload = multer({ dest: 'gallery-photos/' })
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
@@ -55,6 +57,8 @@ app.get('/profile', profile.view);
 app.get('/gallery', gallery.view);
 // Example route
 // app.get('/users', user.list);
+
+app.post('/upload-picture', upload.single('photo'), gallery.upload);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

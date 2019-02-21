@@ -1,48 +1,50 @@
 <!doctype html>
 
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap-grid.css" rel="stylesheet">
-	<link href="/css/profile.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/jquery-1.11.0.js"></script>
-	<script src="/js/bootstrap.bundle.js"></script>
-</head>
 
-{{> cancelNavbar}}
+	<head>
+		<title>Profile</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-grid.css" rel="stylesheet">
+		<link href="/css/profile.css" rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.bundle.js"></script>
+	</head>
 
-<body>
-	<div class="container">
-		 <div class="row">
-			  <div class="col-xs-6">
-			  	<h3>John Smitty</h3>
-			  	<dl>
-				    <dd>jsmitty34</dd>
-				    <dd>jsmitty@gmail.com</dd>
-				</dl> 
-			  </div>
-			  <div class="col-xs-6">
-			  	<img class="member_image" src="https://www.flynz.co.nz/wp-content/uploads/profile-placeholder.png">
-			  </div>
-		</div> 
-		<div class="form-group">
+	{{> cancelNavbar}}
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col col-xs-6">
+					<h3>John Smitty</h3>
+					<p>jsmitty@gmail.com</p>
+					<p>jsmitty34</p>
+				</div>
+				<div class="col col-xs-6">
+					<img class="member_image" src="https://www.flynz.co.nz/wp-content/uploads/profile-placeholder.png">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="usr">Change display name</label>
+				<input type="text" class="form-control" id="usr" placeholder="New display name">
+			</div>
+
+			<div class="text-center">
+				<button type="button" class="btn btn-secondary">Clear Data</button>
+				<button type="button" class="btn btn-secondary">Delete Account</button>
+			</div>
 			
-  			<label for="usr">Change name</label>
-  			<input type="text" class="form-control" id="usr" placeholder="First Last">
-  			<label for="usr">Change display name</label>
-  			<input type="text" class="form-control" id="usr" placeholder="New display name">  
-  			<label for="email">Change email</label>
-  			<input type="email" class="form-control" id="email" placeholder="hello@treeable.com">
-  			<label for="pass">Change password</label>
-  			<input type="password" class="form-control" id="pass" placeholder="...">
-		</div>
-		<button class="clearButton">Clear Data</button>
-		<button class="deleteButton">Delete Account</button>
-		<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+			<h5 class="backButton" onclick="window.history.back();"><span
+					class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 
-	</div>
-</body>
+		</div>
+	</body>
+
 </html>

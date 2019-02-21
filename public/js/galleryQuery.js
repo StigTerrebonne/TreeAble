@@ -2,11 +2,12 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializePage();
-})
-
-function initializePage() {
-}
+    lightGallery(document.getElementById('lightgallery'), {
+        pager: true,
+        mode:'lg-fade',
+        thumbnail: true
+    });
+});
 
 $('.count').each(function () {
     $(this).prop('Counter',0).animate({

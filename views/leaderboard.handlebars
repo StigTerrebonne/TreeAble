@@ -1,105 +1,111 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-	<title>Leaderboard</title> 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/bootstrap-grid.css" rel="stylesheet">
-	<link href="/css/leaderboard.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/jquery-1.11.0.js"></script>
-	<script src="/js/bootstrap.bundle.js"></script>
-	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-	<script src="/js/leaderboardQuery.js"></script>
-</head>
 
-{{> navbar}}
+	<head>
+		<title>Leaderboard</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-grid.css" rel="stylesheet">
+		<link href="/css/leaderboard.css" rel="stylesheet">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/jquery-1.11.0.js"></script>
+		<script src="/js/bootstrap.bundle.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+		<script src="/js/leaderboardQuery.js"></script>
+	</head>
 
-<body>
-	<div class="container">
-		<h1 class="text-center">Leaderboard</h1>
-		<h4 class="text-center">Your Rank:</h4>
-		<div class="count">3</div>
-		
+	{{> navbar}}
 
-		<!-- Table for Leaderboard-->  
-		<div class="table-responsive text-center"><!-- Y Scroll-->
-			<table id="leaderboard" class="table table-hover">
-			    <thead>
-			      	<tr>
-			        	<th>Rank</th>
-			        	<th>Name</th>
-			        	<th>Score</th>
-			      	</tr>
-			    </thead>
-			    <tbody>
-			    	<!--Add JSON Data to leaderboard-->
-			    	{{#each data.leaderboard}}
-			    	<tr>
-			    	<td>{{rank}}</td>
-				      <td>{{name}}</td>
-				      <td>{{score}}</td>
-				    </tr>
-						{{/each}} 
-			    </tbody>
-			</table>
+	<body>
+		<div class="container text-center">
+			<h1>Leaderboard</h1>
+			<h4>Your Rank:</h4>
+			<div class="count">3</div>
+
+
+			<!-- Table for Leaderboard-->
+			<div class="table-responsive text-center">
+				<!-- Y Scroll-->
+				<table id="leaderboard" class="table table-hover">
+					<thead>
+						<tr>
+							<th>Rank</th>
+							<th>Name</th>
+							<th>Score</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--Add JSON Data to leaderboard-->
+						{{#each data.leaderboard}}
+						<tr>
+							<td>{{rank}}</td>
+							<td>{{name}}</td>
+							<td>{{score}}</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+
+
+			<!--Back Button location-->
+			<h5 class="backButton" onclick="window.history.back();"><span
+					class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+
+			<!-- Upload Modal -->
+			<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Upload picture</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form action="/upload-picture" method="post" enctype="multipart/form-data">
+								<input type="file" class="form-control-file" name="photo" />
+								<br />
+								<button type="button" class="btn btn-primary" id="upload-wrapper" data-toggle="modal"
+									data-target="#doneModal" data-dismiss="modal">
+									Upload<input type="submit" value="Upload" id="upload-input" hidden />
+								</button>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Uploaded Modal -->
+			<div class="modal fade" id="doneModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Complete</h5>
+						</div>
+						<div class="modal-body">
+							<p>Your picture has been uploaded! Check it out in the <a href="/galleryx">gallery!</a></p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera"
+				data-toggle="modal" data-target="#uploadModal">
 		</div>
-		
-		
-		<!--Back Button location-->
-		<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+	</body>
 
-		<!-- Modal -->
-		<div id="uploadModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
-
-				    <!-- Modal content-->
-				    <div class="modal-content">
-				      	<div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal">&times;</button>
-					        
-				        	<img src="https://www.recycling.com/wp-content/uploads/2016/06/recycling-symbol-icon-outline-solid-dark-green.png" class="img-thumbnail" alt="Responsive image">
-				      	</div>
-				      	<div class="modal-body">
-				      		<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#doneModal" data-dismiss="modal">Upload?</button>
-			          		
-				     	</div>
-				      	<div class="modal-footer">
-				      		<button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-			        	</div>
-				    </div>
-
-			  </div>
-		</div>
-
-		<div id="doneModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
-
-				  	<!-- Modal content-->
-				    <div class="modal-content">
-				  	    <div class="modal-header">
-					  	  	  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				      			<h4 class="modal-title">Your Picture Has Been Uploaded!</h4>
-				      	</div>
-				      	<div class="modal-body">
-				      			<p>Your rank will be updated after the picture is verified</p>
-				     		</div>
-				      	<div class="modal-footer">
-				      			<button type="submit" class="btn btn-success btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-arrow-right"></span></button>
-			        	</div>
-				    </div>
-
-			  </div>
-
-		</div>
-		<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera" data-toggle="modal" data-target="#uploadModal">
-
-
-
-
-	</div>
-</body>
 </html>

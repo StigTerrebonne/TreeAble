@@ -1,27 +1,57 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" >
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="home">Treeable</a>
-    	</div>
-	</div>
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+	<ul class="navbar-nav mr-auto">
+		<a href="/home" style="padding-right: 10px;">Treeable</a>
+	</ul>
 
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!-- text on left -->
-      <ul class="nav navbar-nav">
-      	<li><a href="leaderboard"><span class="glyphicon glyphicon-signal"></span> Rank</a></li>
-      	<li><a href="discussion"><span class="glyphicon glyphicon-inbox"></span> Discussion</a></li>
-      	<li><a href="gallery"><span class="glyphicon glyphicon-film"></span> Gallery</a></li>	
-      </ul> 	
-		<!-- text on Right -->
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-        <li><a href="help"><span class="glyphicon glyphicon-cutlery"></span> Help</a></li>
-      	<li><a href="index"><span class="glyphicon glyphicon-eject"></span> Log Out</a></li>
-      </ul>
+	<!-- Button when screen is small -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+		aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarText">
+		<!-- Left items -->
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="/leaderboard">
+					<i class="fa fa-signal" aria-hidden="true"></i>
+					Rank
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/discussion">
+					<i class="fa fa-inbox" aria-hidden="true"></i>
+					Discussion
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/gallery">
+					<i class="fa fa-picture-o" aria-hidden="true"></i>
+					Gallery
+				</a>
+			</li>
+		</ul>
+		
+		<!-- Right items -->
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="/profile">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					Profile
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/help">
+					<i class="fa fa-cutlery" aria-hidden="true"></i>
+					Help
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/">
+					<i class="fa fa-sign-out" aria-hidden="true"></i>
+					Log Out
+				</a>
+			</li>
+		</ul>
+	</div>
 </nav>

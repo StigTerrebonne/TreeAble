@@ -1,6 +1,15 @@
-<nav class="navbar navbar-default" role="navigation">
-   	<a class="navbar-brand" href="#home">Treeable</a>
-   	<div class="cancelButton">
-   		<button class="btn btn-link my-2 my-xs-0 pull-right cancelButton" onclick="window.history.back();" type="submit"><span class="glyphicon glyphicon-remove"></span></button>
-   	</div>
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+	<!-- Left item -->
+	<ul class="navbar-nav mr-auto">
+		<a href="/home" style="padding-right: 10px;">Treeable</a>
+	</ul>
+	
+	<!-- Right item -->
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item">
+			<a class="nav-link" type="button" onclick="window.history.back()">
+				<i class="fa fa-times" aria-hidden="true"></i>
+			</a>
+		</li>
+	</ul>
 </nav>
