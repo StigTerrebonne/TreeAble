@@ -73,3 +73,9 @@
     color: gray;
     cursor: pointer;
 }
+#inputField{
+    margin-top: 30px;
+}
+.form-check{
+    margin-top: 30px;
+}

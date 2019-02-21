@@ -1,18 +1,22 @@
-function checkLoginState() {
-  FB.login(function(response) {
-    if (response.status === 'connected') {
+function login() {
+  FB.login(function (responce) {
+    if (response.authResponse) {
       console.log('Successfully logged in with Facebook');
-      FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
+      FB.api('/me?fields=name,first_name,email,picture.width(480)', changeUser);
     } 
     else {
-      console.log('Did Not login to Facebook'); 
+      console.log("Login attempt failed");
     }
-  },{scope: 'public_profile,email'});
+  }, {scope: 'public_profile, email'});
 }
 
 function changeUser(response){
   console.log(response);
-  $('.facebookLogin').hide();
-  $('#name').text(response.name);
-  $('#photo').attr('src',response.picture.data.url);
+  var name = response.name;
+  var email = response.email;
+  var image = response.picture.data.url;
+  var newUser = {'name': name, 'email': email, 'image': image};
+  
+  var users = require("../profile.json");
+  users.profile.push(newUser);
 }

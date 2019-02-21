@@ -14,30 +14,50 @@
 <body>
 	<div class="container">
 		 <div class="row">
-			  <div class="col-xs-6">
-			  	<h3>John Smitty</h3>
+		 	{{#if data.profile}}
+		 		<div class="col-xs-6">
+			  	<h3 id="profileName">{{name}}</h3>
 			  	<dl>
-				    <dd>jsmitty34</dd>
-				    <dd>jsmitty@gmail.com</dd>
+				    <dd id="profileEmail">{{email}}</dd>
+				</dl> 
+			  </div>
+			  <div class="col-xs-6">
+			  	<img class="member_image" id= "profilePhoto" src={{image}}><!--might need to add quotes to image!!-->
+			  </div>
+		 	{{else}}
+			  <div class="col-xs-6">
+			  	<h3 id="profileName">Full Name</h3>
+			  	<dl>
+				    <dd id="profileEmail">example@email.com</dd>
 				</dl> 
 			  </div>
 			  <div class="col-xs-6">
 			  	<img class="member_image" src="https://www.flynz.co.nz/wp-content/uploads/profile-placeholder.png">
 			  </div>
+			  {{/if}}
 		</div> 
-		<div class="form-group">
-			
-  			<label for="usr">Change name</label>
-  			<input type="text" class="form-control" id="usr" placeholder="First Last">
-  			<label for="usr">Change display name</label>
-  			<input type="text" class="form-control" id="usr" placeholder="New display name">  
-  			<label for="email">Change email</label>
-  			<input type="email" class="form-control" id="email" placeholder="hello@treeable.com">
-  			<label for="pass">Change password</label>
-  			<input type="password" class="form-control" id="pass" placeholder="...">
+		<label id="inputField">Change your name</label>
+		<div class="input-group">
+		  <input type="text" id="inputName" class="form-control" placeholder="first last">
+		  <span class="input-group-btn" id="changeName">
+		    <button class="btn btn-default" type="button" id="changeName">Go!</button>
+		  </span>
 		</div>
-		<button class="clearButton">Clear Data</button>
-		<button class="deleteButton">Delete Account</button>
+		<label id="inputField">Change your email</label>
+		<div class="input-group">
+		  <input type="text" class="form-control" id="inputEmail" placeholder="name@example.com">
+		  <span class="input-group-btn">
+		    <button class="btn btn-default" type="button" id="changeEmail">Go!</button>
+		  </span>
+		</div>
+		<div class="form-check">
+		    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+		    <label class="form-check-label" for="exampleCheck1">Share your information with your friends</label>
+		</div>
+
+		<button onclick="location.href='./index'" type="button" id="clearData" class="clearButton">Log Out</button>
+
+		<button onclick="location.href='./index'" type="button" id="clearData" class="deleteButton" href="index">Delete Account</button>
 		<h5 class="backButton" onclick="window.history.back();"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 
 	</div>
@@ -45,5 +65,6 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
+	<script src="/js/profileQuery.js"></script>
 </body>
 </html>
