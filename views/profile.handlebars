@@ -22,23 +22,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-xs-6">
-					<h3>John Smitty</h3>
-					<p>jsmitty@gmail.com</p>
-					<p>jsmitty34</p>
+					<h3 id="fullName">{{data.name}}</h3>
+					<p id="email">{{data.email}}</p>
+					<p id="userName">{{data.userName}}</p>
 				</div>
 				<div class="col col-xs-6">
-					<img class="member_image" src="https://www.flynz.co.nz/wp-content/uploads/profile-placeholder.png">
+					<img class="member_image" src="{{data.image}}">
 				</div>
-			</div>
-
-			<div class="form-group">
-				<label for="usr">Change display name</label>
-				<input type="text" class="form-control" id="usr" placeholder="New display name">
 			</div>
 
 			<div class="text-center">
-				<button type="button" class="btn btn-secondary">Clear Data</button>
-				<button type="button" class="btn btn-secondary">Delete Account</button>
+				<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Clear Data</button>
+				<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Delete Account</button>
 			</div>
 			
 			<h5 class="backButton" onclick="window.history.back();"><span

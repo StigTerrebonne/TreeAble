@@ -12,8 +12,10 @@ var session = require('express-session');
 var serveStatic = require('serve-static');
 var errorhandler = require('errorhandler');
 var favicon = require('serve-favicon');
+var bodyParser = require('body-parser');
 
 // Set up database for photo uploading
+
 var multer = require('multer');
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -68,6 +70,9 @@ app.use(cookieParser('IxD secret key'));
 app.use(session());
 app.use(serveStatic(path.join(__dirname, 'public')));
 
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
+
 // development only
 if ('development' == app.get('env')) {
   app.use(errorhandler());
@@ -95,8 +100,11 @@ router.get('/gallery-photos/:photo', function(req, res) {
 
 router.post('/upload-picture', upload.single('photo'), gallery.upload);
 router.post('/add-comment', discussion.handlePost);
+router.post('/update-user', home.update);
 
 app.use('/', router);
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

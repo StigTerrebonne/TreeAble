@@ -19,16 +19,20 @@
 	</head>
 
 	<body>
-		<div class="container-fluid text-center h-100 w-100 d-flex justify-content-center align-items-center">
+		<div id="fb-root"></div>
+		<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=2225404257524448&autoLogAppEvents=1"></script>
+
+		<div class="container text-center h-100 w-100 d-flex justify-content-center align-items-center">
 			<div class="row">
 				<div class="col col-12">
 					<h1 id="app-title">Treeable</h1>
-					<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#signupModal">
-						Sign Up
-					</button>
-					<p class="paragraph">Already a Member? <a onclick="checkLoginState()">Log In</a></p>
+					
+					<div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();" onclick="window.location.href='./home'"id="facebook-login"></div>
 				</div>
 			</div>
+		</div>
+		<div class="container h-100 w-100"> 
+			{{> about}}
 		</div>
 	</body>
 
