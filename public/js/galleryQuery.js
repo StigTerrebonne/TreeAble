@@ -2,11 +2,24 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-    lightGallery(document.getElementById('lightgallery'), {
-        pager: true,
-        mode:'lg-fade',
-        thumbnail: true
-    });
+    // Upload picture to server code
+	$('#upload-picture').on('submit', function (e) {
+		var form = $(this);
+		var formdata = new FormData(form[0]);
+
+		$.ajax({
+			url: '/upload-picture',
+			data: formdata,
+			cache: false,
+			contentType: false,
+			processData: false,
+			type: 'POST',
+			success: function (data, textStatus, jqXHR) {
+				alert(data);
+			}
+		});
+
+	});
 });
 
 $('.count').each(function () {

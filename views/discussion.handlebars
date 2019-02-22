@@ -20,30 +20,159 @@
 	{{> navbar}}
 
 	<body>
-		<div class="container">
+		<div class="container" id="posts-container">
 			<h2 class="text-center">Discussions</h2>
 
 			<!-- Posts / need to add jQuery onclick -->
-			<div id="posts-container" class="container posts">
-				<div class="card" style="width: 18rem;">
-					{{#each posts.discussion}}
-					<div class="card-body" id={{id}}>
-						<h5 class="card-title">{{title}}</h5>
-						<h6 class="card-subtitle text-muted">Card subtitle</h6>
-						<p class="card-text">{{preview}}</p>
-						<a href="#" class="card-link">View discussion</a>
-						<br /><br />
+			<div class="row">
+				{{#each posts.discussion}}
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-header">
+							<h5>{{title}}</h5>
+						</div>
+						<div class="card-body" id={{id}}>
+							<p class="card-text">{{preview}}</p>
+							<a class="btn btn-primary disc-post">View post</a>
+						</div>
 					</div>
-					{{/each}}
 				</div>
-				<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera"
-					data-toggle="modal" data-target="#uploadModal">
-				<h5 class="back-button"><span class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+				{{/each}}
 			</div>
 
-			<div id="individual-post" class="container"></div>
+		</div>
 
-			<div class="container"></div>
+		<div class="container grid" id="individual-post">
+			<div class="container grid" id="indiv-post0">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>{{posts.discussion.[0].title}}</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{posts.discussion.[0].post}}</p>
+							</div>
+						</div>
+					</div>
+					<br /><br />
+				</div>
+				{{#each posts.discussion.[0].replies}}
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>{{user}}</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{comment}}</p>
+							</div>
+						</div>
+					</div>
+					<br />
+				</div>
+				{{/each}}
+			</div>
+			<div class="container grid" id="indiv-post1">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>{{posts.discussion.[1].title}}</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{posts.discussion.[1].post}}</p>
+							</div>
+						</div>
+					</div>
+					<br /><br />
+				</div>
+				{{#each posts.discussion.[1].replies}}
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>{{user}}</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{comment}}</p>
+							</div>
+						</div>
+					</div>
+					<br />
+				</div>
+				{{/each}}
+			</div>
+			<div class="container grid" id="indiv-post2">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>{{posts.discussion.[2].title}}</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{posts.discussion.[2].post}}</p>
+							</div>
+						</div>
+					</div>
+					<br /><br />
+				</div>
+				{{#each posts.discussion.[2].replies}}
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>{{user}}</h5>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{comment}}</p>
+							</div>
+						</div>
+					</div>
+					<br />
+				</div>
+				{{/each}}
+			</div>
+
+			<div class="container text-center">
+				<form class="form-inline">
+					<input class="form-control" id="comment-box" type="text" placeholder="Add comment">
+					<button type="button" id="add-comment-btn" class="btn btn-primary mb-2">Submit</button>
+				</form>
+			</div>
+
+		</div>
+
+		<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera" data-toggle="modal"
+			data-target="#uploadModal">
+
+		<!-- Upload Modal -->
+		<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Upload picture</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="upload-picture" enctype="multipart/form-data">
+							<input type="file" class="form-control-file" name="photo" />
+							<br />
+							<input type="submit" value="Upload" id="upload-input" />
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<h5 class="back-button">Back</h5>
 		</div>
 	</body>
 

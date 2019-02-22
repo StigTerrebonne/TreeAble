@@ -3,17 +3,42 @@
         {
             "id": "post0",
             "title": "How to Recycle",
-            "preview": "We'll share our tips on recycling and discuss effective strategies here"
+            "preview": "We'll share our tips on recycling and discuss effective strategies here",
+            "post": "Collect newspapers in a paper grocery bag or in tied bundles, depending on your community’s guidelines, and set them out on pickup day. (It takes up to 75,000 trees to produce one Sunday edition of the New York Times.) Don’t recycle wet cardboard. It can clog sorting machines. Throw it away to keep it from contaminating the rest of the load. Don’t recycle bottle tops; they’re not made from the same plastic as recyclable bottles. But if you forget, don’t sweat it. They’ll be sorted down the line. (The energy saved by recycling one plastic bottle can power a computer for 25 minutes.)",
+            "replies": [
+                {
+                    "user": "joe385",
+                    "comment": "wow i didn't know that was how you recycled!"
+                },
+                {
+                    "user": "janedoe318",
+                    "comment": "same!!!"
+                }
+            ]
         },
         {
             "id": "post1",
             "title": "Most common item that you recycle?",
-            "preview": "What are some things you commonly recycle based on the gallery? Share your items here!"
+            "preview": "What are some things you commonly recycle based on the gallery? Share your items here!",
+            "post": "Share some of the things you recycle below!",
+            "replies": [
+                {
+                    "user": "bob325",
+                    "comment": "i like to recycle my water bottles since i drink a lot!"
+                }
+            ]
         },
         {
             "id": "post2",
             "title": "Off topic discussion",
-            "preview": "Have a casual conversation with someone here"
+            "preview": "Have a casual conversation with someone here",
+            "post": "Feel free to talk about anything with our recycling community",
+            "replies": [
+                {
+                    "user": "Xx_recycling_gamer_xX",
+                    "comment": "haha anyone play fortnite?"
+                }
+            ]
         }
     ]
 }
