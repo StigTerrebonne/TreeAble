@@ -57,54 +57,33 @@
 			<h5 class="backButton" onclick="window.history.back();"><span
 					class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 
-			<!-- Upload Modal -->
-			<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel"
-				aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Upload picture</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<form action="/upload-picture" method="post" enctype="multipart/form-data">
-								<input type="file" class="form-control-file" name="photo" />
-								<br />
-								<button type="button" class="btn btn-primary" id="upload-wrapper" data-toggle="modal"
-									data-target="#doneModal" data-dismiss="modal">
-									Upload<input type="submit" value="Upload" id="upload-input" hidden />
-								</button>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Uploaded Modal -->
-			<div class="modal fade" id="doneModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel"
-				aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title">Complete</h5>
-						</div>
-						<div class="modal-body">
-							<p>Your picture has been uploaded! Check it out in the <a href="/galleryx">gallery!</a></p>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera"
 				data-toggle="modal" data-target="#uploadModal">
+		</div>
+
+		<!-- Upload Modal -->
+		<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Upload picture</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="upload-picture" enctype="multipart/form-data">
+							<input type="file" class="form-control-file" name="photo" />
+							<br />
+							<input type="submit" value="Upload" id="upload-input" />
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 

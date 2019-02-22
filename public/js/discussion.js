@@ -38,7 +38,6 @@ $(document).ready(function () {
         $.post('/add-comment', {
             "postNum": postNum,
             "comment": text,
-            "user": "testtesttest"
         }, function (data) {
 
         });
@@ -56,4 +55,23 @@ $(document).ready(function () {
             $('#posts-container').show();
         }
     });
+
+    // Upload picture to server code
+	$('#upload-picture').on('submit', function (e) {
+		var form = $(this);
+		var formdata = new FormData(form[0]);
+
+		$.ajax({
+			url: '/upload-picture',
+			data: formdata,
+			cache: false,
+			contentType: false,
+			processData: false,
+			type: 'POST',
+			success: function (data, textStatus, jqXHR) {
+				alert(data);
+			}
+		});
+
+	});
 })

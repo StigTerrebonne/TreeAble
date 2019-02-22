@@ -1,4 +1,5 @@
 var posts = require('../discussion.json');
+var data = require('../currentUser.json'); 
 
 exports.addPosts = function(req, res) {
 	res.render('discussion', {
@@ -17,10 +18,9 @@ exports.postInfo = function(req, res) {
 exports.handlePost = function(req, res) {
 	var postNum = req.body.postNum;
 	var comment = req.body.comment;
-	var user = req.body.user;
 
 	var newComment = {
-		"user": user,
+		"user": data.userName,
 		"comment": comment
 	}
 
