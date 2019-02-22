@@ -1,7 +1,7 @@
 var posts = require('../discussion.json');
 
 exports.addPosts = function(req, res) {
-  res.render('discussion', {
+	res.render('discussion', {
 		'posts': posts
 	});
 };
@@ -12,4 +12,17 @@ exports.postInfo = function(req, res) {
 	
 	var post = posts.discussion[postID];
 	res.json(post);
+}
+
+exports.handlePost = function(req, res) {
+	var postNum = req.body.postNum;
+	var comment = req.body.comment;
+	var user = req.body.user;
+
+	var newComment = {
+		"user": user,
+		"comment": comment
+	}
+
+	posts.discussion[postNum].replies.push(newComment);
 }
