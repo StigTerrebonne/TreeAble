@@ -22,15 +22,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-xs-6">
-					<h3>John Smitty</h3>
-					<p>jsmitty@gmail.com</p>
-					<p>jsmitty34</p>
+					<h3 id="fullName">{{data.name}}</h3>
+					<p id="email">{{data.email}}</p>
+					<p id="userName">{{data.userName}}</p>
 				</div>
 				<div class="col col-xs-6">
-					<img class="member_image" src="https://www.flynz.co.nz/wp-content/uploads/profile-placeholder.png">
+					<img class="member_image" src="{{data.image}}">
 				</div>
 			</div>
-
 			<div class="form-group">
 				<label for="usr">Change display name</label>
 				<input type="text" class="form-control" id="usr" placeholder="New display name">
