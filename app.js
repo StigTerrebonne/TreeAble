@@ -4,6 +4,7 @@
  */
 
 var express = require('express');
+var bodyParser = require('body-parser');
 var multer = require('multer');
 var upload = multer({ dest: 'gallery-photos/' })
 var http = require('http');
@@ -39,6 +40,9 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -59,6 +63,8 @@ app.get('/gallery', gallery.view);
 // app.get('/users', user.list);
 
 app.post('/upload-picture', upload.single('photo'), gallery.upload);
+app.post('/update-user', home.update);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

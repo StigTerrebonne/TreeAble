@@ -1,18 +1,42 @@
 function checkLoginState() {
-  FB.login(function(response) {
-    if (response.status === 'connected') {
-      console.log('Successfully logged in with Facebook');
-      FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
-    } 
-    else {
-      console.log('Did Not login to Facebook'); 
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+}
+
+function statusChangeCallback(response) {
+  console.log('Facebook login status changed.');
+  console.log(response);
+  // The response object is returned with a status field that lets the
+  // app know the current login status of the person.
+  // Full docs on the response object can be found in the documentation
+  // for FB.getLoginStatus().
+  if (response.status === 'connected') {
+    FB.api('/me?fields=name,first_name,email,picture.width(480)', changeUser);
+// Logged into your app and Facebook.
+    console.log('Successfully logged in with Facebook');
+    
     }
-  },{scope: 'public_profile,email'});
 }
 
 function changeUser(response){
-  console.log(response);
-  $('.facebookLogin').hide();
-  $('#name').text(response.name);
-  $('#photo').attr('src',response.picture.data.url);
+    console.log(response);
+    var name = response.name;
+    var userName = response.first_name;
+    var email = response.email;
+    var image = response.picture.data.url;
+
+    var json = {
+        "name": name,
+        "userName": userName,
+        "email": email,
+        "image": image
+    }
+
+    $.post("/update-user", json, function(data) {
+        console.log('success');
+        window.location.href = "home";
+        
+    });
+
 }
