@@ -1,6 +1,10 @@
 /* IDs */
 #app-title {
-	padding-bottom: 65px;
+	padding-bottom: 30px;
+}
+
+#chevron {
+	padding-top: 70px;
 }
 
 /* Classes */

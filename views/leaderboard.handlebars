@@ -22,10 +22,10 @@
 	{{> navbar}}
 
 	<body>
-		<div class="container text-center">
+		<div class="container text-center w-100">
 			<h1>Leaderboard</h1>
 			<h4>Your Rank:</h4>
-			<div class="count">3</div>
+			<div id="count">{{rank}}</div>
 
 
 			<!-- Table for Leaderboard-->
@@ -51,11 +51,6 @@
 					</tbody>
 				</table>
 			</div>
-
-
-			<!--Back Button location-->
-			<h5 class="backButton" onclick="window.history.back();"><span
-					class="glyphicon glyphicon-chevron-left"></span>Back</h5>
 
 			<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera"
 				data-toggle="modal" data-target="#uploadModal">
@@ -84,6 +79,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="container" style="padding-top: 35px; padding-bottom: 35px;">
+			<h5 class="back-button" onclick="window.history.back();">Back</h5>
 		</div>
 	</body>
 

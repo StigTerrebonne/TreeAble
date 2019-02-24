@@ -33,7 +33,9 @@
 						</div>
 						<div class="card-body" id={{id}}>
 							<p class="card-text">{{preview}}</p>
-							<a class="btn btn-primary disc-post">View post</a>
+							<button type="button" class="btn btn-primary disc-post">
+								View post
+							</button>
 						</div>
 					</div>
 				</div>
@@ -55,10 +57,10 @@
 							</div>
 						</div>
 					</div>
-					<br /><br />
 				</div>
+				<br />
 				{{#each posts.discussion.[0].replies}}
-				<div class="row">
+				<div class="row comment">
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
@@ -69,8 +71,8 @@
 							</div>
 						</div>
 					</div>
-					<br />
 				</div>
+				<br />
 				{{/each}}
 			</div>
 			<div class="container grid" id="indiv-post1">
@@ -85,10 +87,10 @@
 							</div>
 						</div>
 					</div>
-					<br /><br />
 				</div>
+				<br />
 				{{#each posts.discussion.[1].replies}}
-				<div class="row">
+				<div class="row comment">
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
@@ -99,8 +101,8 @@
 							</div>
 						</div>
 					</div>
-					<br />
 				</div>
+				<br />
 				{{/each}}
 			</div>
 			<div class="container grid" id="indiv-post2">
@@ -115,10 +117,10 @@
 							</div>
 						</div>
 					</div>
-					<br /><br />
 				</div>
+				<br />
 				{{#each posts.discussion.[2].replies}}
-				<div class="row">
+				<div class="row comment">
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
@@ -129,8 +131,8 @@
 							</div>
 						</div>
 					</div>
-					<br />
 				</div>
+				<br />
 				{{/each}}
 			</div>
 
@@ -171,7 +173,7 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container" style="padding-top: 35px; padding-bottom: 35px;">
 			<h5 class="back-button">Back</h5>
 		</div>
 	</body>

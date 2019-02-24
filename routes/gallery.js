@@ -1,7 +1,9 @@
-var data = require('../gallery.json'); //grab data for leaderboard
+var gallery = require('../gallery.json'); //grab gallery for leaderboard
 var fs = require('fs');
 var dirPath = 'gallery-photos/';
 
+var currUser = require('../currentUser.json');
+var leaderboardData = require('../leaderboardData.json');
 
 exports.view = function (req, res) {
 	fs.readdir('gallery-photos', function (err, files) {
@@ -11,24 +13,34 @@ exports.view = function (req, res) {
 
 		files.forEach(function (file) {
 
-			var found = data.photos.find((item) => {
+			var found = gallery.photos.find((item) => {
 				return item.image === `${dirPath}${file}`
 			});
 			
 			if(found === undefined) {
-				data.photos.push({
+				gallery.photos.push({
 					"image": `${dirPath}${file}`
 				});
 			}
 		});
 	});
 
+	gallery.photos.reverse();
+
 	res.render('gallery', {
-		'data': data
+		'data': gallery
 	});
 };
 
 exports.upload = function (req, res) {
-	console.log(req.file);
+	var name = currUser.name;
+
+	for(var i = 0; i < leaderboardData.leaderboard.length; i++) {
+		if(leaderboardData.leaderboard[i].name === name) {
+			leaderboardData.leaderboard[i].score += 1;
+			break;
+		}
+	}
+
 	res.send("Your picture has been uploaded! Check it out in the gallery!");
 };

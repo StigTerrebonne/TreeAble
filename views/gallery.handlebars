@@ -9,12 +9,10 @@
 		<link href="/css/bootstrap.css" rel="stylesheet">
 		<link href="/css/bootstrap-grid.css" rel="stylesheet">
 		<link href="/css/gallery.css" rel="stylesheet">
-		<link href="/css/lightgallery.css" rel="stylesheet">
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="/js/jquery-1.11.0.js"></script>
-		<script src="/js/lightgallery.js"></script>
 		<script src="/js/bootstrap.bundle.js"></script>
 		<script src="/js/galleryQuery.js"></script>
 	</head>
@@ -22,10 +20,13 @@
 	{{> navbar}}
 
 	<body>
-		<div class="container">
-			<h1 class="text-center">Good Work!</h1>
-			<h2 class="count text-center">{{data.photos.length}}</h2>
-			<p class="text-center">Uploads (and counting)</p>
+		<div class="container text-center">
+			<h1>Good Work!</h1>
+			<h2 class="count">{{data.photos.length}}</h2>
+			<p>
+				Uploads (and counting) <br />
+				Swipe left and right to see pictures
+			</p>
 		</div>
 
 		<div id="carousel">
@@ -38,7 +39,6 @@
 
 		<img src="https://png.pngtree.com/svg/20170809/jen_camera_add_740680.png" class="addCamera" data-toggle="modal"
 			data-target="#uploadModal">
-
 
 		<!-- Upload Modal -->
 		<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel"
@@ -63,6 +63,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="container" style="padding-top: 45px;">
+			<h5 class="back-button" onclick="window.history.back();">Back</h5>
 		</div>
 	</body>
 

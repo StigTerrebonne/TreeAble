@@ -25,4 +25,5 @@ exports.handlePost = function(req, res) {
 	}
 
 	posts.discussion[postNum].replies.push(newComment);
+	res.json({ "user": data.userName });
 }

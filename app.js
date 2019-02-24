@@ -18,12 +18,12 @@ var bodyParser = require('body-parser');
 
 var multer = require('multer');
 var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'gallery-photos/')
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname)
-  }
+	destination: function (req, file, cb) {
+		cb(null, 'gallery-photos/')
+	},
+	filename: function (req, file, cb) {
+		cb(null, file.originalname)
+	}
 })
 var upload = multer({ storage: storage })
 
@@ -31,12 +31,12 @@ var upload = multer({ storage: storage })
 var fs = require('fs');
 var rimraf = require('rimraf');
 rimraf('gallery-photos/', function () {
-  console.log("finished deleting gallery");
-  fs.mkdir('gallery-photos/', function (err) {
-    if (err) {
-      throw err;
-    }
-  });
+	console.log("finished deleting gallery");
+	fs.mkdir('gallery-photos/', function (err) {
+		if (err) {
+			throw err;
+		}
+	});
 });
 
 var http = require('http');
@@ -70,12 +70,12 @@ app.use(cookieParser('IxD secret key'));
 app.use(session());
 app.use(serveStatic(path.join(__dirname, 'public')));
 
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(errorhandler());
+	app.use(errorhandler());
 }
 
 var router = express.Router();
@@ -87,11 +87,11 @@ router.get('/about', about.view);
 router.get('/discussion', discussion.addPosts);
 router.get('/discussion/:id', discussion.postInfo);
 router.get('/help', help.view);
-router.get('/home', home.view); 
+router.get('/home', home.view);
 router.get('/login', login.view);
 router.get('/profile', profile.view);
 router.get('/gallery', gallery.view);
-router.get('/gallery-photos/:photo', function(req, res) {
+router.get('/gallery-photos/:photo', function (req, res) {
 	var filename = req.params.photo;
 	res.sendFile(path.join(__dirname, `/gallery-photos/${filename}`));
 });
@@ -106,6 +106,6 @@ app.use('/', router);
 
 
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get('port'), function () {
+	console.log('Express server listening on port ' + app.get('port'));
 });

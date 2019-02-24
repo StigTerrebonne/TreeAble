@@ -1,5 +1,11 @@
 /* IDs */
 
+#count {
+	font-size: 50px;
+	margin-top: 5px;
+	text-align: center;
+}
+
 /* Classes */
 
 .addCamera {
@@ -19,12 +25,6 @@
 	cursor: pointer;
 }
 
-.count {
-	font-size: 50px;
-	margin-top: 5px;
-	text-align: center;
-}
-
 .rankingButton {
 	border-radius: 10px;
 	margin-top: 1px;
@@ -41,16 +41,7 @@
 	color: black;
 }
 
-.backButton {
-	position: absolute;
-	margin: 0;
-	border-top: 10px;
-	padding-top: 10px;
-	-ms-transform: translate(-7%, -80%);
-	transform: translate(-7%, -80%);
-}
-
-.backButton:hover {
+.back-button:hover {
 	color: gray;
 	cursor: pointer;
 }
