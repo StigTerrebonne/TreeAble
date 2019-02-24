@@ -6,6 +6,7 @@ var currUser = require('../currentUser.json');
 var leaderboardData = require('../leaderboardData.json');
 
 exports.view = function (req, res) {
+
 	fs.readdir('gallery-photos', function (err, files) {
 		if (err) {
 			return console.log('unable to read directory ' + err);
@@ -18,14 +19,12 @@ exports.view = function (req, res) {
 			});
 			
 			if(found === undefined) {
-				gallery.photos.push({
+				gallery.photos.unshift({
 					"image": `${dirPath}${file}`
 				});
 			}
 		});
 	});
-
-	gallery.photos.reverse();
 
 	res.render('gallery', {
 		'data': gallery

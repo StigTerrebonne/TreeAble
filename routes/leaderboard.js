@@ -14,6 +14,7 @@ exports.addTemplate = function (req, res) {
 
 		if(data.leaderboard[i].name === currUser.name) {
 			rank = i + 1;
+			break;
 		}
 	}
 
@@ -22,7 +23,8 @@ exports.addTemplate = function (req, res) {
 			"rank": data.leaderboard.length,
 			"name": currUser.name,
 			"score": 0
-		})
+		});
+		rank = data.leaderboard.length;
 	}
 
 	res.render('leaderboard', {

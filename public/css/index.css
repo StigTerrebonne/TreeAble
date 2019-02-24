@@ -8,6 +8,13 @@
 }
 
 /* Classes */
+.login {
+	width: 100%;
+}
+
+.login-div {
+	padding-bottom: 30px;
+}
 
 /* Tags */
 html, body {

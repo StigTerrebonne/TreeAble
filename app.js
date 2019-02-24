@@ -31,7 +31,6 @@ var upload = multer({ storage: storage })
 var fs = require('fs');
 var rimraf = require('rimraf');
 rimraf('gallery-photos/', function () {
-	console.log("finished deleting gallery");
 	fs.mkdir('gallery-photos/', function (err) {
 		if (err) {
 			throw err;
@@ -49,7 +48,6 @@ var about = require('./routes/about');
 var discussion = require('./routes/discussion');
 var help = require('./routes/help');
 var home = require('./routes/home');
-var login = require('./routes/login');
 var profile = require('./routes/profile');
 var gallery = require('./routes/gallery');
 // Example route
@@ -88,7 +86,6 @@ router.get('/discussion', discussion.addPosts);
 router.get('/discussion/:id', discussion.postInfo);
 router.get('/help', help.view);
 router.get('/home', home.view);
-router.get('/login', login.view);
 router.get('/profile', profile.view);
 router.get('/gallery', gallery.view);
 router.get('/gallery-photos/:photo', function (req, res) {

@@ -16,7 +16,7 @@ $(document).ready(function() {
 			type: 'POST',
 			success: function (data, textStatus, jqXHR) {
 				alert(data);
-				window.location.reload();
+				window.location.reload(true);
 			}
 		});
 
