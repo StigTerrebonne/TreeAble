@@ -1,7 +1,6 @@
 <!doctype html>
 
 <html>
-
 	<head>
 		<title>Profile</title>
 		<meta charset="utf-8">
@@ -19,25 +18,31 @@
 	{{> cancelNavbar}}
 
 	<body>
-		<div class="container">
-			<div class="row">
+		<div class="container d-flex justify-content-center align-items-center">
+			<div class="grid">
+				<div class="row">
+					<div class="col col-xs-6">
+						<h3 id="fullName">{{data.name}}</h3>
+						<p id="email">{{data.email}}</p>
+						<p id="username">{{data.username}}</p>
+					</div>
+				
 				<div class="col col-xs-6">
-					<h3 id="fullName">{{data.name}}</h3>
-					<p id="email">{{data.email}}</p>
-					<p id="userName">{{data.userName}}</p>
+						<img class="member_image" src="{{data.image}}">
+					</div>
 				</div>
-				<div class="col col-xs-6">
-					<img class="member_image" src="{{data.image}}">
-				</div>
-			</div>
 
-			<div class="text-center">
-				<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Clear Data</button>
-				<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Delete Account</button>
+				<div class="text-center">
+					<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Clear Data</button>
+					<button type="button" onclick="location.href='./index'" class="btn btn-secondary">Delete Account</button>
+				</div>
 			</div>
 			
-			<h5 class="backButton" onclick="window.history.back();"><span
-					class="glyphicon glyphicon-chevron-left"></span>Back</h5>
+			
+			<h5 class="backButton" onclick="window.history.back();">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				Back
+			</h5>
 
 		</div>
 	</body>

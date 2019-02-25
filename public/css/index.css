@@ -1,9 +1,20 @@
 /* IDs */
 #app-title {
-	padding-bottom: 65px;
+	padding-bottom: 30px;
+}
+
+#chevron {
+	padding-top: 70px;
 }
 
 /* Classes */
+.login {
+	width: 100%;
+}
+
+.login-div {
+	padding-bottom: 30px;
+}
 
 /* Tags */
 html, body {
