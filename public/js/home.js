@@ -21,6 +21,22 @@ $(document).ready(function () {
 		});
 
 	});
+
+	$('#upload-btn').click(function(e) {
+		e.preventDefault();
+		ga('create','UA-135070139-1', 'auto');
+		ga('send', 'event', 'open-modal', 'click');
+	});
+	$('#upload-input').click(function(e) {
+		e.preventDefault();
+		ga('create',, 'UA-135070139-1', 'auto');
+		ga('send', "event", 'upload', 'click');
+	});
+	$('#choose-file').click(function(e) {
+		e.preventDefault();
+		ga('create', 'UA-135070139-1', 'auto');
+		ga("send", "event", 'choose-file', 'click');
+	});
 });
 
 function chart() {

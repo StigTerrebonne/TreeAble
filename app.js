@@ -86,6 +86,7 @@ router.get('/discussion', discussion.addPosts);
 router.get('/discussion/:id', discussion.postInfo);
 router.get('/help', help.view);
 router.get('/home', home.view);
+router.get('/homeAlt', home.viewAlt);
 router.get('/profile', profile.view);
 router.get('/gallery', gallery.view);
 router.get('/gallery-photos/:photo', function (req, res) {
