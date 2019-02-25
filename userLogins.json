@@ -1,10 +1,7 @@
 {
-    "logins": [
+    "accounts": [
         {
-            "username": "",
-            "password": "",
-            "email": "",
-            "name": ""
+
         }
     ]
 }

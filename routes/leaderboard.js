@@ -2,8 +2,6 @@ var data = require('../leaderboardData.json');
 var currUser = require('../currentUser.json');
 
 exports.addTemplate = function (req, res) {
-	// Add logic to sort the leaderboard
-
 	data.leaderboard.sort(function (a, b) {
 		return b.score - a.score;
 	});

@@ -20,10 +20,10 @@ exports.handlePost = function(req, res) {
 	var comment = req.body.comment;
 
 	var newComment = {
-		"user": data.userName,
+		"user": data.username,
 		"comment": comment
 	}
 
 	posts.discussion[postNum].replies.push(newComment);
-	res.json({ "user": data.userName });
+	res.json({ "user": data.username });
 }

@@ -81,20 +81,20 @@
 					</div>
 					<div class="modal-body">
 						<form id="create-acc">
-							<input type="text" class="form-control" id="acc-first-name" placeholder="Name">
+							<input type="text" class="form-control" id="acc-name" placeholder="Name">
 							<br />
 							<input type="text" class="form-control" id="acc-username" placeholder="Username">
-							<br />							
+							<br />
 						    <input type="email" class="form-control" id="acc-email" aria-describedby="emailHelp" placeholder="Enter email">
 							<br />
 							<input type="password" class="form-control" id="acc-password" placeholder="Password">
 							<br />
 							<input type="password" class="form-control" id="confirm-password" placeholder="Confirm password">
-							<br />						
+							<br />
 						</form>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-success" data-dismiss="modal">Create Account</button>
+						<button type="button" class="btn btn-success" data-dismiss="modal" id="create-account-btn">Create Account</button>
 						<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>
@@ -121,7 +121,7 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-success" data-dismiss="modal">Login</button>
+						<button type="button" class="btn btn-success" data-dismiss="modal" id="login-btn">Login</button>
 						<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>

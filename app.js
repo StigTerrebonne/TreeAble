@@ -98,6 +98,8 @@ router.get('/gallery-photos/:photo', function (req, res) {
 router.post('/upload-picture', upload.single('photo'), gallery.upload);
 router.post('/add-comment', discussion.handlePost);
 router.post('/update-user', home.update);
+router.post('/create-account', index.createAccount);
+router.post('/verify-login', index.login);
 
 app.use('/', router);
 
