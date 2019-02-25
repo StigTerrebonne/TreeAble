@@ -1,54 +1,54 @@
 {
 	"leaderboard": [
 		{
-			"rank": "1",
+			"rank": 1,
 			"name": "Doug Engelbart",
-			"score": "10000"
+			"score": 20
 		},
 		{
-			"rank": "2",
+			"rank": 2,
 			"name": "Joe Shmow",
-			"score": "9500"
+			"score": 18
 		},
 		{
-			"rank": "3",
+			"rank": 3,
 			"name": "Mary Lam",
-			"score": "8000"
+			"score": 15
 		},
 		{
-			"rank": "4",
+			"rank": 4,
 			"name": "Merry Schiender",
-			"score": "7100"
+			"score": 13
 		},
 		{
-			"rank": "5",
+			"rank": 5,
 			"name": "Henry Douglass",
-			"score": "7000"
+			"score": 11
 		},
 		{
-			"rank": "6",
+			"rank": 6,
 			"name": "Lucy Strong",
-			"score": "6400"
+			"score": 10
 		},
 		{
-			"rank": "7",
+			"rank": 7,
 			"name": "Tazia Griffin",
-			"score": "5400"
+			"score": 9
 		},
 		{
-			"rank": "8",
+			"rank": 8,
 			"name": "Petaluma Square",
-			"score": "100"
+			"score": 6
 		},
 		{
-			"rank": "9",
+			"rank": 9,
 			"name": "John Adams",
-			"score": "90"
+			"score": 3
 		},
 		{
-			"rank": "10",
-			"name": "Lewis Smith",
-			"score": "10"
+			"rank": 10,
+			"name": "Default User",
+			"score": 7
 		}
 	]
 }

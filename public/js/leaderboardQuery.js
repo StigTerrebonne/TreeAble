@@ -18,13 +18,14 @@ $(document).ready(function() {
 			type: 'POST',
 			success: function (data, textStatus, jqXHR) {
 				alert(data);
+				window.location.reload(true);
 			}
 		});
 
 	});
 })
 
-$('.count').each(function () {
+$('#count').each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()
     }, {

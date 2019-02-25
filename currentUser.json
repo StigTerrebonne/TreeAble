@@ -1,6 +1,6 @@
 {
-	"name": "", 
-	"userName": "", 
-	"email": "", 
-	"image": ""
+	"name": "Default User", 
+	"username": "default_user",
+	"email": "defaultuser123@gmail.com", 
+	"image": "https://qph.fs.quoracdn.net/main-qimg-7ca600a4562ef6a81f4dc2bd5c99fee9-c"
 }
