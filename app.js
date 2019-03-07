@@ -15,7 +15,6 @@ var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 
 // Set up database for photo uploading
-
 var multer = require('multer');
 var storage = multer.diskStorage({
 	destination: function (req, file, cb) {
@@ -50,6 +49,7 @@ var help = require('./routes/help');
 var home = require('./routes/home');
 var profile = require('./routes/profile');
 var gallery = require('./routes/gallery');
+var fbHelper = require('./routes/fbHelper');
 // Example route
 // var user = require('./routes/user');
 
@@ -93,6 +93,8 @@ router.get('/gallery-photos/:photo', function (req, res) {
 	var filename = req.params.photo;
 	res.sendFile(path.join(__dirname, `/gallery-photos/${filename}`));
 });
+router.get('/tos', fbHelper.tosView);
+router.get('/policy', fbHelper.policyView);
 // Example route
 // app.get('/users', user.list);
 
