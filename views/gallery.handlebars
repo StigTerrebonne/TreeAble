@@ -26,15 +26,13 @@
 			<h2 class="count">{{data.photos.length}}</h2>
 			<p>
 				Uploads (and counting) <br />
-				Swipe left and right to see pictures
+				Check out your work below
 			</p>
 		</div>
 
 		<div id="carousel">
 			{{#each data.photos}}
-			<div class="slide">
 				<img src="{{image}}" />
-			</div>
 			{{/each}}
 		</div>
 
@@ -43,9 +41,6 @@
 
 		{{> upload}}
 
-		<div class="container" style="padding-top: 45px;">
-			<h5 class="back-button" onclick="window.history.back();">Back</h5>
-		</div>
 	</body>
 
 </html>
