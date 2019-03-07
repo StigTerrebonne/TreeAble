@@ -15,11 +15,13 @@ $(document).ready(function () {
 			contentType: false,
 			processData: false,
 			type: 'POST',
-			success: function (data, textStatus, jqXHR) {
+			mimeType:'multipart/form-data',
+			success: function (data) {
 				alert(data);
+				window.location.reload(true);
 			}
 		});
-
+		e.preventDefault();
 	});
 });
 
