@@ -3,7 +3,8 @@ var data = require('../currentUser.json');
 
 exports.addPosts = function(req, res) {
 	res.render('discussion', {
-		'posts': posts
+		'posts': posts,
+		'alt': true
 	});
 };
 
