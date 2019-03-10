@@ -27,7 +27,8 @@ exports.view = function (req, res) {
 	});
 
 	res.render('gallery', {
-		'data': gallery
+		'data': gallery,
+		'alt': true
 	});
 };
 

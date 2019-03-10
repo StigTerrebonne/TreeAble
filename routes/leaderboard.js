@@ -27,6 +27,7 @@ exports.addTemplate = function (req, res) {
 
 	res.render('leaderboard', {
 		'data': data,
-		'rank': rank
+		'rank': rank,
+		'alt': true
 	});
 };
