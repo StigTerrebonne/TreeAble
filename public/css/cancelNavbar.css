@@ -14,9 +14,3 @@
     max-width: 100%;
     height: auto;
 }
-
-#navbarText .navbar-nav .nav-item a.nav-link:hover {
-    color: white;
-	text-decoration: none;
-	cursor: pointer;
-}

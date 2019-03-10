@@ -10,6 +10,7 @@
 		<link href="/css/bootstrap-grid.css" rel="stylesheet">
 		<link href="/css/index.css" rel="stylesheet">
 		<link href="/css/about.css" rel="stylesheet">
+		<link href="/css/navbar.css" rel="stylesheet">
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
@@ -19,9 +20,6 @@
 		{{> facebook}}
 		<script src="/js/facebook.js"></script>
 	</head>
-	<!-- background image-->
-	<body style="background: url(https://www.nicepng.com/png/full/45-451008_a-winters-green-tree-image-with-snow-christmas.png) top no-repeat;
-	background-size: 55%; background-color:rgb(71, 167, 212)"></body>
 	
 	<body>
 		<div id="fb-root"></div>
@@ -32,20 +30,24 @@
 			<div class="grid">
 				<div class="row">
 					<div class="col col-12">
+						<img src="logo.png" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-12">
 						<h1 id="app-title">Treeable</h1>
-
 					</div>
 				</div>
 				<div class="row login-div">
 					<div class="col col-lg-12">
-						<button type="button" class="btn btn-secondary login" data-toggle="modal" data-target="#create-modal">
+						<button type="button" class="btn btn-success login create-btn" data-toggle="modal" data-target="#create-modal">
 							Create Account
 						</button>
 					</div>
 				</div>
 				<div class="row login-div">
 					<div class="col col-lg-12">
-						<button type="button" class="btn btn-success login" data-toggle="modal" data-target="#login-modal">
+						<button type="button" class="btn btn-success login login-btn" data-toggle="modal" data-target="#login-modal">
 							Log In
 						</button>
 					</div>

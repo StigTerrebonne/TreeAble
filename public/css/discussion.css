@@ -24,9 +24,9 @@ body {
 	cursor: pointer;
 }
 
-.back-button:hover {
-	color: gray;
-	cursor: pointer;
+.disc-post {
+	background-color: #c4822d;
+	border-color: #c4822d;
 }
 
 /* Tags */

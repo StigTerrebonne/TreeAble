@@ -3,27 +3,19 @@
 
 /* Classes */
 
-.backButton {
-	margin: 0;
-	position: absolute;
-	top: 92%;
-	left: 7%;
-	-ms-transform: translate(-7%, -92%);
-	transform: translate(-7%, -92%);
-}
-
-.backButton:hover {
-	color: gray;
-	cursor: pointer;
-}
-
 .member_image {
 	border-radius: 25px;
 	max-width: 100%;
 }
+
 .tree_image {
 	border-radius: 25px;
 	max-width: 93%;
+}
+
+.profile-btn{
+	background-color: #c4822d;
+	border-color: #c4822d;
 }
 
 /* Tags */
@@ -42,6 +34,7 @@ a:hover {
 	text-decoration: none;
 	cursor: pointer;
 }
+
 button{
 	margin-top: 100px;
 }
