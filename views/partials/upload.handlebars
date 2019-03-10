@@ -10,9 +10,24 @@
             </div>
             <div class="modal-body">
                 <form id="upload-picture" enctype="multipart/form-data">
-                    <input type="file" class="form-control-file" name="photo" />
+                    <input type="file" class="form-control-file" name="photo" id="choose-file" />
                     <br />
+                    {{#if alt}}
                     <input type="submit" value="Upload" id="upload-input" />
+                    <script>
+                        $(document).ready(function() {
+                            $('#upload-input').hide();
+                            $('#choose-file').click(function(res) {
+                                $('#upload-input').show();
+                            });
+                            $('#upload-close').click(function(res) {
+                                $('#upload-input').hide();
+                            });
+                        })
+                    </script>
+                    {{else}}
+                    <input type="submit" value="Upload" id="upload-input" />
+                    {{/if}}
                 </form>
             </div>
             <div class="modal-footer">
