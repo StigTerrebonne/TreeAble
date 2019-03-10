@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-	color: #7c8483;
+	color: white;
 	text-decoration: none;
 	cursor: pointer;
 }
