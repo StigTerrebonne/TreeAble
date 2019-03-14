@@ -60,3 +60,9 @@ a:hover {
 	text-decoration: none;
 	cursor: pointer;
 }
+
+input {
+	background-color: #c4822d;
+	color: white;
+	cursor: pointer;
+}

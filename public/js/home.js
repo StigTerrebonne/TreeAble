@@ -17,28 +17,22 @@ $(document).ready(function () {
 			type: 'POST',
 			mimeType:'multipart/form-data',
 			success: function (data) {
-				alert(data);
-				window.location.reload(true);
+				$('#upload-body-info').append(
+					`<br /><p>${data}</p>`
+				);
 			}
 		});
 		e.preventDefault();
 	});
 
+
+	/* remnants of AB testing
 	$('#upload-btn').click(function(e) {
 		e.preventDefault();
 		ga('create','UA-135070139-1', 'auto');
 		ga('send', 'event', 'open-modal', 'click');
 	});
-	// $('#upload-input').click(function(e) {
-	// 	e.preventDefault();
-	// 	ga('create',, 'UA-135070139-1', 'auto');
-	// 	ga('send', "event", 'upload', 'click');
-	// });
-	// $('#choose-file').click(function(e) {
-	// 	e.preventDefault();
-	// 	ga('create', 'UA-135070139-1', 'auto');
-	// 	ga("send", "event", 'choose-file', 'click');
-	// });
+	*/
 });
 
 function chart() {

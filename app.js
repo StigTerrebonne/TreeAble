@@ -11,7 +11,6 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var serveStatic = require('serve-static');
 var errorhandler = require('errorhandler');
-var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
 
 // Set up database for photo uploading

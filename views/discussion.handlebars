@@ -16,34 +16,36 @@
 		<script src="/js/jquery-1.11.0.js"></script>
 		<script src="/js/bootstrap.bundle.js"></script>
 		<script src="/js/discussion.js"></script>
-		{{> google-tracking}}
 	</head>
 
 	{{> navbar}}
 
 	<body>
 		<div class="container" id="posts-container">
-			<h2 class="text-center">Discussions</h2>
+			<h1 class="text-center">Discussions</h1>
 
-			<!-- Posts / need to add jQuery onclick -->
-			<div class="row">
+			<!-- Posts  -->
+			<br />
+			<div class="grid">
 				{{#each posts.discussion}}
-				<div class="col-sm-4">
-					<div class="card">
-						<div class="card-header">
-							<h5>{{title}}</h5>
-						</div>
-						<div class="card-body" id={{id}}>
-							<p class="card-text">{{preview}}</p>
-							<button type="button" class="btn btn-success disc-post">
-								View post
-							</button>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card">
+							<div class="card-header">
+								<h3>{{title}}</h3>
+							</div>
+							<div class="card-body" id={{id}}>
+								<p class="card-text">{{preview}}</p>
+								<button type="button" class="btn btn-success disc-post">
+									View post
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
+				<br />
 				{{/each}}
 			</div>
-
 		</div>
 
 		<div class="container grid" id="individual-post">
@@ -52,7 +54,7 @@
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h5>{{posts.discussion.[0].title}}</h5>
+								<h3>{{posts.discussion.[0].title}}</h3>
 							</div>
 							<div class="card-body">
 								<p class="card-text">{{posts.discussion.[0].post}}</p>
@@ -66,7 +68,7 @@
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h5>{{user}}</h5>
+								<h4>{{user}}</h4>
 							</div>
 							<div class="card-body">
 								<p class="card-text">{{comment}}</p>
@@ -82,7 +84,7 @@
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h5>{{posts.discussion.[1].title}}</h5>
+								<h3>{{posts.discussion.[1].title}}</h3>
 							</div>
 							<div class="card-body">
 								<p class="card-text">{{posts.discussion.[1].post}}</p>
@@ -96,7 +98,7 @@
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h5>{{user}}</h5>
+								<h4>{{user}}</h4>
 							</div>
 							<div class="card-body">
 								<p class="card-text">{{comment}}</p>
@@ -112,7 +114,7 @@
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h5>{{posts.discussion.[2].title}}</h5>
+								<h3>{{posts.discussion.[2].title}}</h3>
 							</div>
 							<div class="card-body">
 								<p class="card-text">{{posts.discussion.[2].post}}</p>
@@ -126,7 +128,7 @@
 					<div class="col-sm-12">
 						<div class="card">
 							<div class="card-header">
-								<h5>{{user}}</h5>
+								<h4>{{user}}</h4>
 							</div>
 							<div class="card-body">
 								<p class="card-text">{{comment}}</p>
