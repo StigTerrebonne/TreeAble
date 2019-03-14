@@ -15,11 +15,12 @@ $(document).ready(function() {
 			processData: false,
 			type: 'POST',
 			success: function (data, textStatus, jqXHR) {
-				alert(data);
-				window.location.reload(true);
+				$('#upload-body-info').append(
+					`<br /><p>${data}</p>`
+				);
 			}
 		});
-
+		e.preventDefault();
 	});
 });
 

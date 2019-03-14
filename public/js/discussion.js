@@ -61,19 +61,6 @@ $(document).ready(function () {
 		}
     });
 
-    $('.back-button').click(function (e) {
-        if ($('#posts-container').is(':visible')) {
-            window.history.back();
-        } else {
-            $('#individual-post').hide();
-            $('#indiv-post0').hide();
-            $('#indiv-post1').hide();
-            $('#indiv-post2').hide();
-            $("input.form-control").show();
-            $('#posts-container').show();
-        }
-    });
-
     // Upload picture to server code
 	$('#upload-picture').on('submit', function (e) {
 		var form = $(this);
@@ -87,9 +74,11 @@ $(document).ready(function () {
 			processData: false,
 			type: 'POST',
 			success: function (data, textStatus, jqXHR) {
-				alert(data);
+                $('#upload-body-info').append(
+					`<br /><p>${data}</p>`
+				);
 			}
-		});
-
+        });
+        e.preventDefault();
 	});
 })

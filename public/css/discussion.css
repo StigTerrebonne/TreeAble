@@ -44,3 +44,9 @@ a:hover {
 a.disc-post {
 	color: white;
 }
+
+input {
+	background-color: #c4822d;
+	color: white;
+	cursor: pointer;
+}

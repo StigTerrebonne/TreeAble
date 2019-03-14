@@ -19,6 +19,12 @@
 
 /* Tags */
 
+input {
+	background-color: #c4822d;
+	color: white;
+	cursor: pointer;
+}
+
 body {
 	padding-top: 65px;
 }

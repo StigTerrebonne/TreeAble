@@ -21,9 +21,10 @@ exports.view = function(req, res){
 		rank = data.leaderboard.length;
 	}
 
+	// Changed to true because we are now using the better design
 	res.render('home', {
 		'rank': rank, 
-		'alt': false
+		'alt': true
 	});
 };
 
